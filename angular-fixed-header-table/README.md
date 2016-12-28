@@ -1,4 +1,7 @@
 # packaged angular-fixed-header-table
+
+The package allows to fix a header and the first column of a table when data are overflow.
+
 # Usage
 
 Add `ngFixedHeaderTable` as a dependency for your app:
@@ -13,6 +16,12 @@ define(['angular-fixed-header-table'], function () {
 
 Use `fixed-header-table` attribute with table:
 
+HTML:
+```
+<table id="tableId" fixed-header-table fixed="both" divheight="100%" divwidth="100%" headercolor="#f7f7f7">
+```
+
+HAML:
 ```
 %table{"id"=>"tableId", "fixed-header-table"=>"", "fixed"=>"both", "divWidth"=>"100%", "divHeight"=>"100%", "headerColor"=>"#f7f7f7"}
 ```
