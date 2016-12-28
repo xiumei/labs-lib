@@ -14,7 +14,7 @@ define(['angular-fixed-header-table'], function () {
 Use `fixed-header-table` attribute with table:
 
 ```
-%table{"id"=>"tableId", "fixed-header-table"=>, "fixed"=>"both", "divWidth"=>"100%", "divHeight"=>"100%", "headerColor"=>"#f7f7f7"}
+%table{"id"=>"tableId", "fixed-header-table"=>"", "fixed"=>"both", "divWidth"=>"100%", "divHeight"=>"100%", "headerColor"=>"#f7f7f7"}
 ```
 # Attribute
 ```
