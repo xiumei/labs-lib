@@ -1,4 +1,6 @@
 # packaged labs-utils
+
+The package defines some common functions of Access Labs as AngularJS service.
 # Usage
 
 Add `labsUtils` as a dependency for your app:

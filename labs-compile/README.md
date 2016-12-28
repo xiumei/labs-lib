@@ -1,4 +1,5 @@
 # packaged labs-compile
+
 The directive allows you to call AngularJS functions in localization strings.
 # Usage
 
@@ -12,6 +13,7 @@ define(['labs-compile'], function () {
 });
 ```
 Use `compile` attribute with directives:
+
 HTML:
 ```
 <a ng-click="test()">test</a>

@@ -11,6 +11,7 @@ define(['labs-tooltips'], function () {
 });
 ```
 Use `tooltip` directives on your page:
+
 HTML:
 ```
 <tooltip class="fa fa-question-circle ng-scope" id="yourId" ng-mouseenter="style={cursor:'pointer'};manualShowPopover('yourId');" ng-mouseleave="style={cursor:'auto'};manualHidePopover('yourId');" ng-style="style" popover-placement="top" popover-title="" popover-trigger="show" popover="yourContent" style="cursor: auto;"></tooltip>
