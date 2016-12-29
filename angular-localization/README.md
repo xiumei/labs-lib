@@ -24,7 +24,7 @@ Note that put your localization files in the path and format below:
 prefix: window.location.pathname + 'languages/messages_',
 suffix: '.json'
 ```
-# Default il8n file
+# Default i18n file
 
 ```
 window.location.pathname + 'languages/messages_en.json'
