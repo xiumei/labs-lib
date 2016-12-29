@@ -1,6 +1,6 @@
 # packaged labs-compile
 
-The directive allows you to call AngularJS functions in localization strings.
+The directive allows you to call AngularJS functions in il8n messages.
 # Usage
 
 Add `ngCompile` as a dependency for your app:

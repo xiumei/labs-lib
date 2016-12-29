@@ -1,7 +1,6 @@
 # packaged angular-fixed-header-table
 
 The package allows to fix a header and the first column of a table when data are overflow.
-
 # Usage
 
 Add `ngFixedHeaderTable` as a dependency for your app:

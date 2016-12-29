@@ -1,6 +1,6 @@
 # packaged labs-download
 
-Download with pure AngularJS
+Download with pure AngularJS.
 # Usage
 
 Add `ngDownload` as a dependency for your app:

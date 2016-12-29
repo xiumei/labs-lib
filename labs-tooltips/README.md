@@ -1,4 +1,6 @@
 # packaged labs-tooltips
+
+Popover tooltips.
 # Usage
 
 Add `ngToolTips` as a dependency for your app:
