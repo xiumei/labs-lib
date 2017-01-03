@@ -3,6 +3,7 @@
     "use strict";
     var base = window.location.pathname;
     var deps = [
+        'bower_components/angular/angular.min',
         'bower_components/angular-cookies/angular-cookies.min',
         'bower_components/angular-translate/angular-translate.min',
         'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min',
@@ -16,17 +17,18 @@
         'bower_components/labs-lib/labs-utils/labs-utils'
     ];
     var paths = {};
+    var shim = {};
     deps.map(function (dep) {
         var pathArr = dep.split('/');
         var module = (pathArr[pathArr.length - 1].split('.'))[0];
         paths[module] = base + dep;
+        shim[module] = {
+            exports: module
+        };
     });
+    shim['angular-translate-loader-static-files'].deps = ['angular-translate'];
     require.config({
         paths: paths,
-        shim: {
-            'angular-translate-loader-static-files': {
-                deps: ['angular-translate']
-            }
-        }
+        shim: shim
     });
 }());
