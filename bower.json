@@ -3,10 +3,10 @@
         "name": "Xiumei Meng"
     },
     "name": "labs-lib",
-    "version": "0.0.3",
+    "version": "0.0.1",
     "main": ["./lib-loader.js"],
     "dependencies": {
-        "angular": ">=1",
+        "angular": "~1.4.14",
         "angular-cookies": "~1.4.0",
         "angular-translate": "~2.13.1",
         "angular-translate-loader-static-files": "~2.13.1"
