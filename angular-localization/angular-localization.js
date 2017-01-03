@@ -14,8 +14,8 @@ define(['angular-cookies', 'angular-translate', 'angular-translate-loader-static
         $translateProvider.preferredLanguage('en');
     });
 
-    module.factory('Localization', function () {
-        var favoriteLanguage = 'en'; //$cookies.rh_locale;
+    module.factory('Localization', function ($cookies) {
+        var favoriteLanguage = $cookies.rh_locale;
         return {
             favoriteLanguage: favoriteLanguage
         };
