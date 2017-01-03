@@ -1,6 +1,6 @@
 /*global document, window, angular, define*/
 
-define(['ui-bootstrap-customized'], function () {
+define(['ui-bootstrap-tpls-customized'], function () {
     "use strict";
 
     // Define the module

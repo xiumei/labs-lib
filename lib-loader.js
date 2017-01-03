@@ -1,19 +1,32 @@
 /*global require, window, define*/
 (function () {
     "use strict";
-    require.config({
-        paths: {
-            'cookies': window.location.pathname + 'bower_components/angular-cookies/angular-cookies.min',
-            'translate': window.location.pathname + 'bower_components/angular-translate/angular-translate.min',
-            'translate-loader': window.location.pathname + 'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min',
-            'ui-bootstrap-customized': window.location.pathname + 'bower_components/labslib/labs-tooltips/ui-bootstrap-tpls-0.11.0-customized',
+    var base = window.location.pathname;
+    var deps = [
+        'bower_components/angular-cookies/angular-cookies.min',
+        'bower_components/angular-translate/angular-translate.min',
+        'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min',
+        'bower_components/labs-lib/labs-tooltips/ui-bootstrap-tpls-customized',
 
-            'localization': window.location.pathname + 'bower_components/labslib/angular-localization/angular-localization',
-            'angular-fixed-header-table': window.location.pathname + 'bower_components/labslib/angular-fixed-header-table/angular-fixed-header-table',
-            'labs-compile': window.location.pathname + 'bower_components/labslib/labs-compile/labs-compile',
-            'labs-download': window.location.pathname + 'bower_components/labslib/labs-download/labs-download',
-            'labs-tooltips': window.location.pathname + 'bower_components/labslib/labs-tooltips/labs-tooltips',
-            'labs-utils': window.location.pathname + 'bower_components/labslib/labs-utils/labs-utils'
+        'bower_components/labs-lib/angular-localization/angular-localization',
+        'bower_components/labs-lib/angular-fixed-header-table/angular-fixed-header-table',
+        'bower_components/labs-lib/labs-compile/labs-compile',
+        'bower_components/labs-lib/labs-download/labs-download',
+        'bower_components/labs-lib/labs-tooltips/labs-tooltips',
+        'bower_components/labs-lib/labs-utils/labs-utils'
+    ];
+    var paths = {};
+    deps.map(function (dep) {
+        var pathArr = dep.split('/');
+        var module = (pathArr[pathArr.length - 1].split('.'))[0];
+        paths[module] = base + dep;
+    });
+    require.config({
+        paths: paths,
+        shim: {
+            'angular-translate-loader-static-files': {
+                deps: ['angular-translate']
+            }
         }
     });
 }());

@@ -1,5 +1,5 @@
 /*global document, window, angular, define*/
-define(['cookies', 'translate', 'translate-loader'], function () {
+define(['angular-cookies', 'angular-translate', 'angular-translate-loader-static-files'], function () {
     "use strict";
 
     // Define the module
@@ -14,8 +14,8 @@ define(['cookies', 'translate', 'translate-loader'], function () {
         $translateProvider.preferredLanguage('en');
     });
 
-    module.factory('Localization', function ($cookies) {
-        var favoriteLanguage = $cookies.rh_locale;
+    module.factory('Localization', function () {
+        var favoriteLanguage = 'en'; //$cookies.rh_locale;
         return {
             favoriteLanguage: favoriteLanguage
         };

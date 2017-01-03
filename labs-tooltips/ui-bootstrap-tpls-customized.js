@@ -4277,7 +4277,7 @@ angular.module("template/tooltip/tooltip-popup.html", []).run(["$templateCache",
 angular.module("template/popover/popover.html", []).run(["$templateCache",
 	function ($templateCache) {
 		$templateCache.put("template/popover/popover.html",
-			"<div id=\"popoverDiv\" ng-mouseleave= \"hidePopOverDiv();\" class=\"popover {{placement}}\" ng-class=\"{ in: isOpen(), fade: animation() }\">\n" +
+			"<div id=\"popoverDiv\" ng-mouseleave= \"hidePopOverDiv();\" class=\"popover {{placement}}\" >\n" +
 			"  <div class=\"arrow\"></div>\n" +
 			"\n" +
 			"  <div class=\"popover-inner\" ng-mouseenter=\"isOpen()\" ng-mouseleave=\"isOpen = false;\">\n" +

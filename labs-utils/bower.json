@@ -1,8 +1,0 @@
-{
-    "author": {
-        "name": "Xiumei Meng"
-    },
-    "name": "labs-utils",
-    "version": "0.0.1",
-    "main": ["./labs-utils.js"]
-}

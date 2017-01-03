@@ -4,7 +4,7 @@
 Add `ngLocalization` as a dependency for your app:
 
 ```javascript
-define(['localization'], function () {
+define(['angular-localization'], function () {
     "use strict";
     var module = angular.module('app.main', ['ngLocalization']);
     return module;
